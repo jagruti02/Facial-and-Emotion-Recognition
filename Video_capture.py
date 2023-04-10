@@ -42,12 +42,12 @@ while True:
         captured_grey_scale /= 225
         
         #loading the trained model using CK+ datatset
-        emotion_model = tf.keras.models.load_model('Saved_model')
+        emotion_model = tf.keras.models.load_model('please give the saved model name')
         
         #predicting the model based of the caputed face using haar code.
         predicted_emotion = emotion_model.predict(captured_grey_scale)
 
-        #finding the position of maximum value in the arry of predicted value.
+        #finding the position of maximum value in the array of predicted value.
         pos = np.argmax(predicted_emotion[0])
         #print(pos)
         
